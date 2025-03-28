@@ -1,0 +1,39 @@
+{
+    "Name": null,
+    "Email": "vbari8527@gmail.com",
+    "Phone": "+91-7875618947",
+    "Skills": [
+        "Intelligence",
+        "Python",
+        "SQL",
+        "Science",
+        "Java",
+        "JavaScript",
+        "C"
+    ],
+    "Education": [
+        "Theem College of Engg.",
+        "LLMs \n \n",
+        "Computer Graphics \n \n",
+        "Acmegrade",
+        "Vidyavardhini\u2019s College of Engg"
+    ],
+    "Projects": [
+        "Project Work",
+        "\u2022 Land Area Calculation using ML (2022): Developed a desktop software for calculating the land area in map. Implemented",
+        "efficient to use for the user. Used openstreet map API to get the online map. Python, OpenStreetMap.",
+        "\u2022 Smart Parking System using CV (2023): Applied computer vision concepts to find the correct parking space for the car.",
+        "Implemented front-end to book a slot for the car to park and integrate system with back-end. Used cv2 library for recognition.",
+        "Python, CV2.",
+        "\u2022 Smart Driving System using NLP (2024): Used the computer vision to detect the path holes and using NLP concepts",
+        "implemented the correct path to drive the car. Python, CV2, NLP.",
+        "Certificates",
+        "\u2022 Internship in Data Science:  Successfully completed the training and internship in domain of Data Science by",
+        "Acmegrade."
+    ],
+    "Certifications": [
+        "Certificates",
+        "\u2022 Internship in Data Science:  Successfully completed the training and internship in domain of Data Science by",
+        "Acmegrade."
+    ]
+}

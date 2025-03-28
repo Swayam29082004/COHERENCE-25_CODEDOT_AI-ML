@@ -1,13 +1,8 @@
-from django.contrib import admin
-from django.urls import path, include
-from django.conf import settings
-from django.conf.urls.static import static
+from django.urls import path
+from .views import get_csrf_token, upload_resume, process_uploaded_resume  # ✅ Ensure Correct Import
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api/', include('resumes.urls')),  # Ensure your app name is correct
+    path("get-csrf-token/", get_csrf_token, name="get_csrf_token"),
+    path("upload-resume/", upload_resume, name="upload_resume"),
+    path("process_uploaded_resume/", process_uploaded_resume, name="process_uploaded_resume"),
 ]
-
-# Serve uploaded files in development
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
