@@ -87,10 +87,15 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dothire',
+        'USER': 'postgres',
+        'PASSWORD': 'admin',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
+
 
 
 # Password validation
@@ -150,11 +155,34 @@ REST_FRAMEWORK = {
     "DEFAULT_RENDERER_CLASSES": ("rest_framework.renderers.JSONRenderer",),
 }
 
-MEDIA_URL = "/media/"
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+# MEDIA_URL = "/media/"
+# MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 CORS_ALLOW_ALL_ORIGINS = True
 
 ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+]
+
+
+CSRF_TRUSTED_ORIGINS = ["http://localhost:3000"]
+
 
 DATA_UPLOAD_MAX_MEMORY_SIZE = 5 * 1024 * 1024
+# ✅ Allow frontend React app to access Django backend
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",  # React Frontend
+]
+
+# ✅ Allow sending authentication credentials (Cookies, CSRF tokens)
+CORS_ALLOW_CREDENTIALS = True
+
+# ✅ CSRF settings to prevent Forbidden errors
+CSRF_TRUSTED_ORIGINS = ["http://localhost:3000"]
+
+# ✅ Media file handling
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
